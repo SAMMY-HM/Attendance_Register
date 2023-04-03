@@ -44,3 +44,22 @@ public class Attenndance_Reg {
                 i--;
             }
         }
+           // Print the present array
+        System.out.println("Present Members: "+ " "+presentIndex);
+        for (int i = 0; i < presentIndex; i++) {
+            System.out.println(presentArray[i] + " ");
+        }
+        System.out.println();
+
+        // Print the absent array
+        System.out.println("Absent Members: "+ " "+absentIndex);
+        for (int i = 0; i < absentIndex; i++) {
+            System.out.println(absentArray[i] + " ");
+        }
+        System.out.println();
+
+       
+    }
+
+    }
+
