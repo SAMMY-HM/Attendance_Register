@@ -18,3 +18,29 @@ public class Attenndance_Reg {
         }
         /*  prints the names of the array 
         System.out.println("The following are the names in the register: ");
+          for(int i = 0; i < x; i++){
+           System.out.println(names[i]);
+
+        } */
+
+        String[] presentArray = new String[names.length];
+        String[] absentArray = new String[names.length];
+        int presentIndex = 0;
+        int absentIndex = 0;
+
+        // Prompt the user to classify each element as absent or present
+        for (int i = 0; i < names.length; i++) {
+            System.out.print("Is " + names[i] + " present? (Y/N): ");
+            String response = input.nextLine().toUpperCase();
+            System.out.println();
+            if (response.equals("Y")) {
+                presentArray[presentIndex] = names[i];
+                presentIndex++;
+            } else if (response.equals("N")) {
+                absentArray[absentIndex] = names[i];
+                absentIndex++;
+            } else {
+                System.out.println("Invalid response. Please enter Y or N.");
+                i--;
+            }
+        }
